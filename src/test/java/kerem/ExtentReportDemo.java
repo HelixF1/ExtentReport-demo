@@ -8,6 +8,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.io.File;
+
 public class ExtentReportDemo {
 
 
@@ -16,7 +18,7 @@ public class ExtentReportDemo {
     @BeforeTest
     public void config() {
 
-        String path = System.getProperty("user.dir") + "\\reports\\index.html";
+        String path = System.getProperty("user.dir") + File.separator + "reports" + File.separator + "index.html";
         ExtentSparkReporter reporter = new ExtentSparkReporter(path);
 
         reporter.config().setReportName("Web Automation Results");
